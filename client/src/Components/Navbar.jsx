@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/"); // Redirect to home after logout
+    navigate("/login"); // Redirect to home after logout
   };
 
   return (

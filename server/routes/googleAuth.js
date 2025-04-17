@@ -8,8 +8,9 @@ router.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
-    // Redirect to frontend after successful login
-    res.redirect(`http://localhost:5173/profile?name=${req.user.displayName}`);
+   // Redirect from backend after successful Google auth
+res.redirect(`http://localhost:5173/oauth2/redirect?token=${yourGeneratedJWT}`);
+
   }
 );
 
